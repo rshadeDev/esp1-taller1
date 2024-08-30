@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-height: 100dvh;
+}
+
+body {
+    background-color: #faf3f3;
+    color: #000;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 15px;
+}
+
+.logo img {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    background: none;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #3169c9;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bienvenida h1 {
+    font-size: 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #1e3c72, #3169c9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bienvenida p {
+    max-width: 800px;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #000;
+    font-weight: 500;
+    text-wrap: pretty;
+}
+
+.bienvenida img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.categoria {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 500px;
+    margin-top: 1rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+        );
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -200px;
+    }
+}
+
+.item {
+    margin-top: 100px;
+    width: 200px;
+    height: 500px;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 7), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.item img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.item1 {
+    animation-delay: calc(30s / 7 * (7 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(30s / 7 * (7 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 7 * (7 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 7 * (7 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 7 * (7 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(30s / 7 * (7 - 6) * -1);
+}
+
+.item7 {
+    animation-delay: calc(30s / 7 * (7 - 7) * -1);
+}

@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #faf3f3;
+    color: #000;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 15px;
+}
+
+.logo img {
+    width: 100px;
+    height: 50px;
+    background: none;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #3169c9;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+
+.wrapper {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    transition: all 0.s ease-in-out;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+    filter: grayscale(1);
+    transition: all 0.5s ease-in-out;
+}
+
+.card-1 {
+    background: url(../images/players/Damian-Lillard.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.card-2 {
+    background: url(../images/players/Kobe-Bryant.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.card-3 {
+    background: url(../images/players/LeBron-James.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.card-4 {
+    background: url(../images/players/Michael-Jordan.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.card-5 {
+    background: url(../images/players/Stephen-Curry.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.card:nth-child(even) {
+    transform: translateY(-10px);
+}
+
+.card::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.card_content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: #fff;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+}
+
+.card_content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card_content p {
+    font-size: 1rem;
+    text-wrap: pretty;
+}
+
+.container:has(.card-1:hover) {
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+.container:has(.card-2:hover) {
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+.container:has(.card-3:hover) {
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.container:has(.card-4:hover) {
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+.container:has(.card-5:hover) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.7) 0px -50px 80px inset;
+    filter: grayscale(0);
+}
+
+.card:hover .card_content {
+    top: 75%;
+}
+
+.card:hover::after {
+    opacity: 0;
+}
