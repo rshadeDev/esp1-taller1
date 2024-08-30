@@ -73,6 +73,7 @@ main {
     margin-top: 2.5rem;
     margin-bottom: 2rem;
     font-weight: 700;
+    text-wrap: pretty;
     background: linear-gradient(to right, #1e3c72, #3169c9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
